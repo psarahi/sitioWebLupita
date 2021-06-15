@@ -2,29 +2,65 @@
     <img src="assets/mother.png" alt="" style="width: 7%;" srcset="">
     <h2 class="titulo">Lupita te ayuda</h2>
 </div>
-<div style="margin: auto; width: 70%;">
+<div style="margin: auto; width: 95%;">
     <nz-tabset>
-        <nz-tab *ngFor="let tab of tabs" [nzTitle]="titleTemplate">
-            <ng-template #titleTemplate>
-                <i [class]="tab.icon" style="font-size: 25px; color: #ad008f;"></i>
-                <span style="font-size: 16px; font-weight: bold;"> {{ tab.name }} </span>
+        <nz-tab [nzTitle]="titleInicio">
+            <ng-template #titleInicio>
+                <i class="bi bi-house-door-fill" style="font-size: 18px; color: #ad008f;"></i>
+                <span style="font-size: 15px; font-weight: bold;"> Inicio </span>
             </ng-template>
-            {{ tab.name }}
-        </nz-tab>
-        <nz-tab [nzTitle]="titleTest">
-            <ng-template #titleTest>
-                <i class="bi bi-alarm" style="font-size: 25px; color: #ad008f;"></i>
-                <span style="font-size: 16px; font-weight: bold;"> test </span>
-            </ng-template>
-            <h2>fhfjhfjhfh</h2>
-            <div style="width: 60%; margin: auto;">
-                <h5>jjjjjjj</h5>
-                <nz-carousel nzAutoPlay>
-                    <div nz-carousel-content *ngFor="let index of array">
-                        <h3>{{ index }}</h3>
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="assets/inicio.jpeg" class="d-block w-100" style="width: 75%!important; margin: auto;" alt="...">
                     </div>
-                </nz-carousel>
+                    <div class="carousel-item">
+                        <img src="assets/mama-bebe.png" class="d-block w-100" style="width: 75%!important; margin: auto;" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="assets/comiendo.jpeg" class="d-block w-100" style="width: 75%!important; margin: auto;" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="assets/bebe.jpeg" class="d-block w-100" style="width: 75%!important; margin: auto;" alt="...">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
             </div>
         </nz-tab>
+        <nz-tab [nzTitle]="titleCH">
+            <ng-template #titleCH>
+                <i class="bi bi-bookmark-heart-fill" style="font-size: 18px; color: #ad008f;"></i>
+                <span style="font-size: 15px; font-weight: bold;"> Cursos y horarios </span>
+            </ng-template>
+
+        </nz-tab>
+        <nz-tab [nzTitle]="titleInfo">
+            <ng-template #titleInfo>
+                <i class="bi bi-person-badge-fill" style="font-size: 18px; color: #ad008f;"></i>
+                <span style="font-size: 15px; font-weight: bold;"> Sobre mi </span>
+            </ng-template>
+
+        </nz-tab>
+        <nz-tab [nzTitle]="titlePago">
+            <ng-template #titlePago>
+                <i class="bi bi-credit-card-fill" style="font-size: 18px; color: #ad008f;"></i>
+                <span style="font-size: 15px; font-weight: bold;"> Métodos de pago </span>
+            </ng-template>
+
+        </nz-tab>
+
     </nz-tabset>
 </div>
