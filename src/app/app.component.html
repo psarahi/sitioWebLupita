@@ -1,0 +1,30 @@
+<div class="container shadow p-3 mb-5 bg-body rounded" style="display: flex; justify-content: flex-start; background-color: #f7d5eb !important;">
+    <img src="assets/mother.png" alt="" style="width: 7%;" srcset="">
+    <h2 class="titulo">Lupita te ayuda</h2>
+</div>
+<div style="margin: auto; width: 70%;">
+    <nz-tabset>
+        <nz-tab *ngFor="let tab of tabs" [nzTitle]="titleTemplate">
+            <ng-template #titleTemplate>
+                <i [class]="tab.icon" style="font-size: 25px; color: #ad008f;"></i>
+                <span style="font-size: 16px; font-weight: bold;"> {{ tab.name }} </span>
+            </ng-template>
+            {{ tab.name }}
+        </nz-tab>
+        <nz-tab [nzTitle]="titleTest">
+            <ng-template #titleTest>
+                <i class="bi bi-alarm" style="font-size: 25px; color: #ad008f;"></i>
+                <span style="font-size: 16px; font-weight: bold;"> test </span>
+            </ng-template>
+            <h2>fhfjhfjhfh</h2>
+            <div style="width: 60%; margin: auto;">
+                <h5>jjjjjjj</h5>
+                <nz-carousel nzAutoPlay>
+                    <div nz-carousel-content *ngFor="let index of array">
+                        <h3>{{ index }}</h3>
+                    </div>
+                </nz-carousel>
+            </div>
+        </nz-tab>
+    </nz-tabset>
+</div>

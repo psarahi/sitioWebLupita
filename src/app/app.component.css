@@ -1,0 +1,19 @@
+.titulo {
+    width: 100%;
+    margin: auto;
+    color: #3a5071;
+}
+
+[nz-carousel-content] {
+    text-align: center;
+    height: 10px;
+    line-height: 10px;
+    background: #364d79;
+    color: #fff;
+    overflow: hidden;
+}
+
+h3 {
+    color: #fff;
+    margin-bottom: 0;
+}
